@@ -128,12 +128,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DossierProfesseur.cpp" />
+    <ClCompile Include="filedFileOpenException.cpp" />
     <ClCompile Include="FileHelper.cpp" />
     <ClCompile Include="myStuct.cpp" />
     <ClCompile Include="StructureDonneeDevoirUn.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CustomHelpers.h" />
     <ClInclude Include="DossierProfesseur.h" />
+    <ClInclude Include="failedFileOpenException.h" />
     <ClInclude Include="FileHelper.h" />
     <ClInclude Include="myStuct.h" />
   </ItemGroup>
