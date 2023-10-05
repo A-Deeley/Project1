@@ -127,6 +127,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CustomHelpers.cpp" />
     <ClCompile Include="DossierProfesseur.cpp" />
     <ClCompile Include="filedFileOpenException.cpp" />
     <ClCompile Include="FileHelper.cpp" />
