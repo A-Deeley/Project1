@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
-
 using namespace std;
+
 static class myStuct
 {
     public:
@@ -22,7 +22,7 @@ static class myStuct
             Etudiants* listeEtudiants;
             Professeur* suivant;
 
-            bool nameEquals(std::string name, bool caseInsensitive);
+            bool nameEquals(std::string name, bool caseInsensitive = false);
         };
 };
 

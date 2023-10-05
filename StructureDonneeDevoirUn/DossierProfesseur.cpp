@@ -81,7 +81,7 @@ bool DossierProfesseur::supprimer(string name)
 		myStuct::Professeur* previousProf = NULL;
 		while (nowProf != NULL)
 		{
-			if (nowProf->nameEquals(name))
+			if (nowProf->nameEquals(name, true))
 			{
 				//This if is usefull only it the teacher is at the index 0
 				if (previousProf == NULL)

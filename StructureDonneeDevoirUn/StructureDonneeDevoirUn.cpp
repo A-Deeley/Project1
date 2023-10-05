@@ -16,8 +16,10 @@ int main()
 {
 	FileHelper fileManager;
 
-	std::vector<std::string> profInfo = fileManager.ReadFile("FP.txt");
-	std::vector<std::string> commandes = fileManager.ReadFile("FT.txt");
+	string testInfo = fileManager.ReadFile("FP.txt");
+	string testCommandes = fileManager.ReadFile("FT.txt");
+	std::vector<std::string> profInfo; /*= fileManager.ReadFile("FP.txt");*/
+	std::vector<std::string> commandes; /*= fileManager.ReadFile("FT.txt");*/
 
 	DossierProfesseur prof = DossierProfesseur(&profInfo);
 	for (int i = 0; i < commandes.size(); i++)

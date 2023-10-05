@@ -6,6 +6,7 @@
 #include <string>
 #include <cstring>
 #include <vector>
+#include "failedFileOpenException.h"
 
 FileHelper::FileHelper()
 {
@@ -30,8 +31,30 @@ bool FileHelper::CreateEmptyFile(std::string fileName)
 	}
 }
 
-std::vector<std::string> FileHelper::ReadFile(std::string fileName)
+/// <summary>
+/// 
+/// </summary>
+/// <param name="fileName"></param>
+/// <returns></returns>
+std::string FileHelper::ReadFile(std::string fileName)
 {
+	std::ifstream fileStream;
+
+	fileStream.open(fileName);
+	if (!fileStream.is_open()) {
+		throw failedFileOpenException::failedFileOpenException(fileName);
+	}
+
+	string line;
+	string text;
+	while (std::getline(fileStream, line)) {
+		text = text + line;
+	}
+
+	cout << "text is\n" + text;
+	return text;
+
+	/*
 	std::ifstream inputFile;
 	inputFile.open(fileName);
 	if (!inputFile.is_open()) {
@@ -47,7 +70,8 @@ std::vector<std::string> FileHelper::ReadFile(std::string fileName)
 		contenu.push_back(tempLineString);
 	}
 
-	return contenu;
+	return contenu
+	*/
 }
 
 bool FileHelper::DeleteFile(std::string fileName)

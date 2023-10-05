@@ -10,7 +10,7 @@ public:
 
 	bool CreateEmptyFile(std::string fileName);
 
-	std::vector<std::string> ReadFile(std::string fileName);
+	std::string ReadFile(std::string fileName);
 
 	bool DeleteFile(std::string fileName);
 
